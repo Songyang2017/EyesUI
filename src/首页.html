@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>异地商会党建学习教育微平台</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="//static.jsk365.com/swiper/4.0.7/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<div id="app">
+    <div class="index-top-box">
+        <p style="margin-right: 0.27rem;">党建学习微平台</p>
+        <div class="search-box-div" @click="popFlag=true">
+            <i class="iconfont">&#xe60b;</i>
+            <span>请输入相关的活动、课程等信息</span>
+        </div>
+    </div>
+    <div class="middle-content">
+        <div>
+            <div class="banner-imgs swiper-container">
+                <div class="swiper-wrapper">
+                    <a v-for="item in bannersList" :href="item.url" class="swiper-slide">
+                        <img :src="item.img" alt="">
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="index-content">
+                <div class="index-content-box ripple">签到/签退</div>
+                <div class="index-content-box">我要报名</div>
+                <div class="index-content-box">我要学习</div>
+                <div class="index-content-box">热门活动</div>
+            </div>
+        </div>
+    </div>
+    <ul class="footerbar-List">
+        <li><a href="javascript:;" class="footerbar-active"><i class="iconfont">&#xe62f;</i><p>首页</p></a></li>
+        <li><a href="统计.html"><i class="iconfont">&#xe607;</i><p>统计</p></a></li>
+        <li><a href="我的.html"><i class="iconfont">&#xe638;</i><p>我的</p></a></li>
+    </ul>
+    <popup :show-flag="popFlag">
+        <div class="index-top-box">
+            <div class="search-box" @click="popFlag=true">
+                <i class="iconfont">&#xe60b;</i>
+                <input type="text" v-model="query" placeholder="请输入相关的活动、课程等信息">
+            </div>
+            <p style="margin-left: 0.27rem;" @click="popFlag=!popFlag;query=''">取消</p>
+        </div>
+        <div class="search-keywords">
+            <p>热门推荐</p>
+            <ul class="key-list">
+                <li v-for="item in keyList" @click="query=item"><span>{{item}}</span></li>
+            </ul>
+        </div>
+    </popup>
+    <loading v-show="display"></loading>
+</div>
+<script type="text/javascript" src="//static.jsk365.com/lib/vue/2.5.3/vue.min.js"></script>
+<script type="text/javascript" src="//static.jsk365.com/swiper/4.0.7/swiper.min.js"></script>
+<script src="//static.jsk365.com/lib/iscroll/iscroll.min.js"></script>
+<script src="js/components.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            bannersList:[{img:'https://oi3v1wa3b.qnssl.com/product_5b18f11f16ee2.png',url:''},
+                {img:'https://oi3v1wa3b.qnssl.com/product_5b17880543e23.jpg',url:''},
+                {img:'https://oi3v1wa3b.qnssl.com/product_5b07f9a618ca3.png',url:''},
+                {img:'https://oi3v1wa3b.qnssl.com/product_5afe8e4e9639d.png',url:''},
+            ],
+            keyList: ['日本','美国队长','迪丽热巴','奇异博士','侏罗纪世界2','权利的游戏','霍比特人','澳大利亚','韩国','新加坡','泰国',],
+            popFlag: false,
+            query:''
+        },
+        computed:{
+            display() {
+                return false;
+            }
+        },
+        mounted:function(){
+            initSwiper();
+        },
+        methods:{
+
+        }
+    })
+
+    function initSwiper(){
+        var banners = new Swiper('.banner-imgs',{
+            pagination: {
+                el:'.swiper-pagination',
+                bulletActiveClass: 'my-bullet-active',
+            },
+            direction: 'horizontal',
+            autoplay: true
+        })
+    }
+</script>
+</body>
+</html>
