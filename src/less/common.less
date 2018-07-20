@@ -1,0 +1,140 @@
+@import 'mixin';
+@import 'variable';
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color:transparent
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+a{
+	color:@color-text-ll;
+}
+
+body{
+	background: @color-background;
+}
+
+[v-cloak]{
+	display: none !important;
+}
+
+.vertically{
+	position: absolute;
+	top: 50%;
+	.translate(0,-50%,0);
+}
+
+.flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items:center;
+}
+._flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.no-wrap{
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.textCenter{
+	text-align: center;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+}
+.textLeft{
+	text-align: left;
+	text-align: -moz-left;
+	text-align: -webkit-left;
+}
+.textRight{
+	text-align: right;
+	text-align: -moz-right;
+	text-align: -webkit-right;
+}
+
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.word-break{
+	word-wrap:break-word;
+	word-break:normal;
+}
+.price-color{
+	color:@color-price;
+}
+.gray-color{
+	color:@color-gray;
+}
+
+div, span, a, header {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+.oldPrice{
+	color:@color-gray;
+	font-size:@font-size-small;
+	text-decoration: line-through;
+}
+
+/* Flexible Box Model*/
+.fixef-bot-btn{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: @color-price;
+    font-size:@font-size-large;
+    padding: 10px;
+    z-index: 1000;
+    .textCenter();
+    -webkit-transform:translateZ(0);
+    color:@color-eleBackground;
+}
+
+.ic-center:before{
+	color:@color-price;
+}
+.ic-shopping-2:before{
+	color:@color-price;
+}
+.ic-seek:before{
+	color:@color-price;
+}
+.ic-activity-2:before{
+	color:@color-price;
+}
+.ic-home:before{
+	color:@color-price;
+}
+
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background-color: red !important;
+}
+
+/*iphone下input出现的问题解决*/
+input[type="tel"],input[type="password"],input[type="text"],input[type="number"],input[type="search"],input[type="submit"],button{
+	border-radius: 0;
+	-webkit-appearance:none;
+}
