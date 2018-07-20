@@ -1,0 +1,22 @@
+{
+  "name": "gulp_item",
+  "version": "1.0.0",
+  "description": "党建教育微平台",
+  "main": "app.js",
+  "scripts": {
+    "test": "gulp edu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/DongRiNuanYang2017/partyEducation.git"
+  },
+  "keywords": [
+    "gulp",
+    "edu"
+  ],
+  "author": "冬日暖阳",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
