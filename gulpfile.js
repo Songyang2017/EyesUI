@@ -9,7 +9,7 @@ var app = {
 }
 
 gulp.task('html', function () {
-    gulp.src(app.src + '*.html')
+    gulp.src(app.src + '**/*.html')
         .pipe(gulp.dest(app.build))
         .pipe(gulp.dest(app.dist))
         .pipe($.connect.reload())
