@@ -11,13 +11,13 @@
 </head>
 <body>
 <div id="app">
-    <div class="index-top-box">
-        <p style="margin-right: 0.27rem;">党建学习微平台</p>
-        <div class="search-box-div" @click="popFlag=true">
-            <i class="iconfont">&#xe60b;</i>
-            <span>请输入相关的活动、课程等信息</span>
-        </div>
-    </div>
+    <!--<div class="index-top-box">-->
+        <!--<p style="margin-right: 0.27rem;">党建学习微平台</p>-->
+        <!--<div class="search-box-div" @click="popFlag=true">-->
+            <!--<i class="iconfont">&#xe60b;</i>-->
+            <!--<span>请输入相关的活动、课程等信息</span>-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="middle-content">
         <div>
             <div class="banner-imgs swiper-container">
@@ -42,7 +42,7 @@
         <li><a href="统计.html"><i class="iconfont">&#xe607;</i><p>统计</p></a></li>
         <li><a href="我的.html"><i class="iconfont">&#xe638;</i><p>我的</p></a></li>
     </ul>
-    <popup :show-flag="popFlag">
+    <popup v-show="popFlag">
         <div class="index-top-box">
             <div class="search-box" @click="popFlag=true">
                 <i class="iconfont">&#xe60b;</i>

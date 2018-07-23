@@ -57,12 +57,8 @@ Vue.component('loading', {
 })
 
 Vue.component('popup',{
-    template: `<div class="popup" :style="{backgroundColor: bgColor}" v-show="showFlag"><slot></slot></div>`,
+    template: `<div class="popup" :style="{backgroundColor: bgColor}"><slot></slot></div>`,
     props:{
-        showFlag: {
-            type: Boolean,
-            default: false
-        },
         bgColor: {
             type: String,
             default: '#ffffff'
