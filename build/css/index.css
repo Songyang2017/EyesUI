@@ -202,12 +202,6 @@ a:focus,
   padding: 0;
   -webkit-tap-highlight-color: transparent;
 }
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
 a {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -319,6 +313,9 @@ header {
 .ic-home:before {
   color: #ff9d29;
 }
+.block-shadow {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+}
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
@@ -338,8 +335,8 @@ button {
 @font-face {
   font-family: 'iconfont';
   /* project id 716897 */
-  src: url('//at.alicdn.com/t/font_716897_n4hat3en4da.eot');
-  src: url('//at.alicdn.com/t/font_716897_n4hat3en4da.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_716897_n4hat3en4da.woff') format('woff'), url('//at.alicdn.com/t/font_716897_n4hat3en4da.ttf') format('truetype'), url('//at.alicdn.com/t/font_716897_n4hat3en4da.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_716897_z7y6mev5xd.eot');
+  src: url('//at.alicdn.com/t/font_716897_z7y6mev5xd.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_716897_z7y6mev5xd.woff') format('woff'), url('//at.alicdn.com/t/font_716897_z7y6mev5xd.ttf') format('truetype'), url('//at.alicdn.com/t/font_716897_z7y6mev5xd.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -364,6 +361,9 @@ body,
 #app {
   height: 100%;
   background-color: #fff;
+}
+button {
+  border-radius: 0.08rem;
 }
 .index-top-box {
   position: fixed;
@@ -659,4 +659,54 @@ body,
 }
 [data-dpr="3"] .search-keywords .key-list li {
   font-size: 45px;
+}
+.logout_btn {
+  width: 100%;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+.logout_btn button {
+  font-size: 16px;
+  width: 95%;
+  padding: 0.3rem 0;
+  margin: auto;
+  border: 0;
+  color: #fff;
+  background-color: #fb5d5d;
+}
+[data-dpr="2"] .logout_btn button {
+  font-size: 32px;
+}
+[data-dpr="3"] .logout_btn button {
+  font-size: 48px;
+}
+.message-item .message-item-list {
+  background-color: #fff;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  margin: 0.3rem auto;
+  width: 95%;
+  padding: 0.3rem;
+}
+.message-item .message-item-list a .msg-header {
+  font-size: 14px;
+}
+[data-dpr="2"] .message-item .message-item-list a .msg-header {
+  font-size: 28px;
+}
+[data-dpr="3"] .message-item .message-item-list a .msg-header {
+  font-size: 42px;
+}
+.message-item .message-item-list a .msg-body {
+  margin-top: 0.2rem;
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+[data-dpr="2"] .message-item .message-item-list a .msg-body {
+  font-size: 32px;
+}
+[data-dpr="3"] .message-item .message-item-list a .msg-body {
+  font-size: 48px;
 }

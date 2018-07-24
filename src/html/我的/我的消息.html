@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的消息</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <scroll :data="msg" style="height: 100%;overflow: hidden;">
+            <ul class="message-item">
+                <li v-for="item in msg" class="message-item-list">
+                    <a href="javascript:;">
+                        <p class="msg-header">
+                            <i class="iconfont icon-left" style="color: #ffa500">&#xe616;</i>
+                            <span>{{item.type}}</span>
+                            <span>&nbsp;{{item.data}}</span>
+                        </p>
+                        <p class="msg-body">{{item.body}}</p>
+                    </a>
+                </li>
+                <li style="height: .3rem;"></li>
+            </ul>
+        </scroll>
+    </div>
+<script type="text/javascript" src="//static.jsk365.com/lib/vue/2.5.3/vue.min.js"></script>
+<script type="text/javascript" src="//static.jsk365.com/lib/iscroll/iscroll.min.js"></script>
+<script type="text/javascript" src="../../js/components.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            msg: [
+                {
+                    type: '活动提醒',
+                    data: '07-08 09:12',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                },
+                {
+                    type: '活动提醒',
+                    body: '您已预定8月12号百智汇活动，请记得按时参加！'
+                }
+            ]
+        }
+    })
+</script>
+</body>
+</html>
