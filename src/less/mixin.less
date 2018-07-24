@@ -12,7 +12,6 @@
     -webkit-transform:rotate(@x); /* Safari 和 Chrome */  
     -o-transform:rotate(@x);     /* Opera */ 
 }
- 
 
 .translate(@x, @y, @z){
 	transform: translate3d(@x, @y, @z);
@@ -59,5 +58,25 @@
 	};
 	[data-dpr="3"] & {
 		font-size: @font-size * 3;
+	}
+}
+
+.width-dpr(@font-size){
+	width: @font-size;
+	[data-dpr="2"] & {
+		width: @font-size * 2;
+	};
+	[data-dpr="3"] & {
+		width: @font-size * 3;
+	}
+}
+
+.height-dpr(@font-size){
+	height: @font-size;
+	[data-dpr="2"] & {
+		height: @font-size * 2;
+	};
+	[data-dpr="3"] & {
+		height: @font-size * 3;
 	}
 }
