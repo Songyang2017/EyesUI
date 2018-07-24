@@ -1,0 +1,662 @@
+@charset "utf-8";
+/*
+@名称: base
+@功能: 重设浏览器默认样式
+*/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: rgba(0, 0, 0, 0.8);
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /*这个属性可以使页面上的字体抗锯齿,使用后字体看起来会
+  更清晰舒服*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+/* 去掉各Table cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: none;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*font-size:100%;
+  font-weight:500; */
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  /*text-decoration:underline;*/
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+/* IE6,7焦点点状线去除 */
+a:focus,
+*:focus {
+  outline: none;
+}
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+.clearfix {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+/* 设置显示和隐藏, 通常用来与 JS 配合 */
+.hide {
+  display: none !important;
+  visibility: hidden;
+}
+.block {
+  display: block !important;
+}
+/* 设置内联, 减少浮动带来的bug */
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+a {
+  color: rgba(0, 0, 0, 0.8);
+}
+body {
+  background: #f4f4f4;
+}
+[v-cloak] {
+  display: none !important;
+}
+.vertically {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+._flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.no-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.textCenter {
+  text-align: center;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+.textLeft {
+  text-align: left;
+  text-align: -moz-left;
+  text-align: -webkit-left;
+}
+.textRight {
+  text-align: right;
+  text-align: -moz-right;
+  text-align: -webkit-right;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.word-break {
+  word-wrap: break-word;
+  word-break: normal;
+}
+.price-color {
+  color: #ff9d29;
+}
+.gray-color {
+  color: #999;
+}
+div,
+span,
+a,
+header {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.oldPrice {
+  color: #999;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+/* Flexible Box Model*/
+.fixef-bot-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ff9d29;
+  font-size: 14px;
+  padding: 10px;
+  z-index: 1000;
+  text-align: center;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  -webkit-transform: translateZ(0);
+  color: #fff;
+}
+.ic-center:before {
+  color: #ff9d29;
+}
+.ic-shopping-2:before {
+  color: #ff9d29;
+}
+.ic-seek:before {
+  color: #ff9d29;
+}
+.ic-activity-2:before {
+  color: #ff9d29;
+}
+.ic-home:before {
+  color: #ff9d29;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: red !important;
+}
+/*iphone下input出现的问题解决*/
+input[type="tel"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="submit"],
+button {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 716897 */
+  src: url('//at.alicdn.com/t/font_716897_n4hat3en4da.eot');
+  src: url('//at.alicdn.com/t/font_716897_n4hat3en4da.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_716897_n4hat3en4da.woff') format('woff'), url('//at.alicdn.com/t/font_716897_n4hat3en4da.ttf') format('truetype'), url('//at.alicdn.com/t/font_716897_n4hat3en4da.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+[data-dpr="2"] .iconfont {
+  font-size: 32px;
+}
+[data-dpr="3"] .iconfont {
+  font-size: 48px;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html,
+body,
+#app {
+  height: 100%;
+  background-color: #fff;
+}
+.index-top-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 0.22rem 0.35rem;
+}
+[data-dpr="2"] .index-top-box {
+  font-size: 30px;
+}
+[data-dpr="3"] .index-top-box {
+  font-size: 45px;
+}
+.index-top-box p {
+  font-size: 16px;
+  color: #999;
+}
+[data-dpr="2"] .index-top-box p {
+  font-size: 32px;
+}
+[data-dpr="3"] .index-top-box p {
+  font-size: 48px;
+}
+.index-top-box .search-box {
+  flex: 1;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 0.165rem;
+  border-radius: 5px;
+  color: rgba(52, 60, 69, 0.27);
+}
+.index-top-box .search-box input {
+  flex: 1;
+  border: none;
+  width: 80%;
+  padding-left: 0.15rem;
+  background-color: inherit;
+}
+.index-top-box .search-box-div {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  flex: 1;
+  padding: 0.15rem;
+  background: #f1f1f1;
+  border-radius: 5px;
+  color: rgba(52, 60, 69, 0.27);
+}
+.middle-content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 1.24rem;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+}
+.swiper-slide img {
+  width: 10rem;
+}
+.swiper-pagination-bullet {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0.5rem;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 0.12rem;
+}
+.my-bullet-active {
+  background-color: #fff;
+  opacity: 0.82;
+  border-radius: 15px;
+  width: 0.46rem;
+  height: 0.2rem;
+}
+.index-content {
+  margin: 0.6rem 0 0;
+}
+.index-content .index-content-box {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  width: 8rem;
+  padding: 0.8rem 0;
+  margin: 0 auto;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+}
+[data-dpr="2"] .index-content .index-content-box {
+  font-size: 32px;
+}
+[data-dpr="3"] .index-content .index-content-box {
+  font-size: 48px;
+}
+.footerbar-active {
+  color: #fb5d5d;
+}
+.footerbar-List {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #999;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  border-top: 1px solid #e6e6e6;
+  background-color: #f7f7fa;
+  font-size: 12px;
+  z-index: 500;
+}
+[data-dpr="2"] .footerbar-List {
+  font-size: 24px;
+}
+[data-dpr="3"] .footerbar-List {
+  font-size: 36px;
+}
+.footerbar-List li {
+  flex: 1;
+  text-align: center;
+}
+.footerbar-List li i {
+  font-size: 20px;
+}
+[data-dpr="2"] .footerbar-List li i {
+  font-size: 40px;
+}
+[data-dpr="3"] .footerbar-List li i {
+  font-size: 60px;
+}
+.footerbar-List li p {
+  margin-top: 0.06rem;
+}
+.mycenter-item {
+  font-size: 0;
+}
+.mycenter-item .mycenter-item-list {
+  position: relative;
+  font-size: 0;
+  padding: 0.35rem 0.25rem;
+}
+.mycenter-item .mycenter-item-list:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #e6e6e6;
+  transform: scale(1, 0.6);
+  -webkit-transform: scale(1, 0.6);
+  -ms-transform: scale(1, 0.6);
+  -moz-transform: scale(1, 0.6);
+}
+.mycenter-item .mycenter-item-list a {
+  font-size: 14px;
+  color: #999;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+[data-dpr="2"] .mycenter-item .mycenter-item-list a {
+  font-size: 28px;
+}
+[data-dpr="3"] .mycenter-item .mycenter-item-list a {
+  font-size: 42px;
+}
+.mycenter-item .mycenter-item-list a div {
+  margin-left: 0.2rem;
+  flex: 1;
+}
+[data-dpr="2"] .mycenter-item .mycenter-item-list a {
+  font-size: 32px;
+}
+[data-dpr="3"] .mycenter-item .mycenter-item-list a {
+  font-size: 48px;
+}
+.mycenter-item .mycenter-item-list a i.icon-left {
+  font-size: 22px;
+}
+[data-dpr="2"] .mycenter-item .mycenter-item-list a i.icon-left {
+  font-size: 44px;
+}
+[data-dpr="3"] .mycenter-item .mycenter-item-list a i.icon-left {
+  font-size: 66px;
+}
+.mycenter-item .mycenter-item-list .item-list-right {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.8);
+}
+.mycenter-item .item-list-title a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+.mycenter-item .item-list-title .badge {
+  font-size: 12px;
+  width: 3.5rem;
+  color: #fff;
+  background-color: #fb5d5d;
+  border: 1px solid;
+  text-align: center;
+  padding: 2px 0;
+  margin: 0.1rem 0;
+  border-radius: 4px;
+}
+[data-dpr="2"] .mycenter-item .item-list-title .badge {
+  font-size: 24px;
+}
+[data-dpr="3"] .mycenter-item .item-list-title .badge {
+  font-size: 36px;
+}
+.mycenter-item .item-list-title .rank-mark {
+  font-size: 14px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  color: #999;
+  margin: 0.25rem 0 0;
+  justify-content: space-around;
+}
+[data-dpr="2"] .mycenter-item .item-list-title .rank-mark {
+  font-size: 28px;
+}
+[data-dpr="3"] .mycenter-item .item-list-title .rank-mark {
+  font-size: 42px;
+}
+.mycenter-item .item-list-title .rank-mark li {
+  text-align: center;
+}
+.mycenter-item .item-list-title .rank-mark li span:nth-child(2) {
+  color: #20262e;
+}
+.search-keywords {
+  padding: 0 0.35rem;
+  padding-top: 1.24rem;
+  font-size: 15px;
+}
+[data-dpr="2"] .search-keywords {
+  font-size: 30px;
+}
+[data-dpr="3"] .search-keywords {
+  font-size: 45px;
+}
+.search-keywords p {
+  margin: 0.2rem 0 0.4rem;
+  color: #999;
+}
+.search-keywords .key-list li {
+  display: inline-block;
+  padding: 0.2rem 0.35rem;
+  margin: 0 0.3rem 0.2rem 0;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-size: 15px;
+  color: #20262e;
+}
+[data-dpr="2"] .search-keywords .key-list li {
+  font-size: 30px;
+}
+[data-dpr="3"] .search-keywords .key-list li {
+  font-size: 45px;
+}

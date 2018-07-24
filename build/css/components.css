@@ -1,0 +1,492 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+a {
+  color: rgba(0, 0, 0, 0.8);
+}
+body {
+  background: #f4f4f4;
+}
+[v-cloak] {
+  display: none !important;
+}
+.vertically {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+}
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+._flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.no-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.textCenter {
+  text-align: center;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+.textLeft {
+  text-align: left;
+  text-align: -moz-left;
+  text-align: -webkit-left;
+}
+.textRight {
+  text-align: right;
+  text-align: -moz-right;
+  text-align: -webkit-right;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.word-break {
+  word-wrap: break-word;
+  word-break: normal;
+}
+.price-color {
+  color: #ff9d29;
+}
+.gray-color {
+  color: #999;
+}
+div,
+span,
+a,
+header {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.oldPrice {
+  color: #999;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+/* Flexible Box Model*/
+.fixef-bot-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ff9d29;
+  font-size: 14px;
+  padding: 10px;
+  z-index: 1000;
+  text-align: center;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  -webkit-transform: translateZ(0);
+  color: #fff;
+}
+.ic-center:before {
+  color: #ff9d29;
+}
+.ic-shopping-2:before {
+  color: #ff9d29;
+}
+.ic-seek:before {
+  color: #ff9d29;
+}
+.ic-activity-2:before {
+  color: #ff9d29;
+}
+.ic-home:before {
+  color: #ff9d29;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: red !important;
+}
+/*iphone下input出现的问题解决*/
+input[type="tel"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="submit"],
+button {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+/*
+@名称: base
+@功能: 重设浏览器默认样式
+*/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: rgba(0, 0, 0, 0.8);
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /*这个属性可以使页面上的字体抗锯齿,使用后字体看起来会
+  更清晰舒服*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+/* 去掉各Table cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: none;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*font-size:100%;
+  font-weight:500; */
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  /*text-decoration:underline;*/
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+/* IE6,7焦点点状线去除 */
+a:focus,
+*:focus {
+  outline: none;
+}
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+.clearfix {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+/* 设置显示和隐藏, 通常用来与 JS 配合 */
+.hide {
+  display: none !important;
+  visibility: hidden;
+}
+.block {
+  display: block !important;
+}
+/* 设置内联, 减少浮动带来的bug */
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 600;
+  width: 100%;
+  height: 100%;
+}
+.loading {
+  height: 25px;
+  text-align: center;
+}
+.loading span {
+  display: inline-block;
+  width: 0.18rem;
+  height: 100%;
+  border-radius: 4px;
+  background: lightgreen;
+  margin: 0 0.1rem;
+  -webkit-animation: load 1.04s ease infinite;
+}
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 0.13s;
+}
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.26s;
+}
+.loading span:nth-child(4) {
+  -webkit-animation-delay: 0.39s;
+}
+.loading span:nth-child(5) {
+  -webkit-animation-delay: 0.52s;
+}
+@-webkit-keyframes load {
+  0%,
+  100% {
+    height: 40px;
+    background: lightgreen;
+  }
+  50% {
+    height: 60px;
+    margin-top: -20px;
+    background: lightblue;
+  }
+}
+.loading-span {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+.loading-span p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 25px;
+}
+[data-dpr="2"] .loading-span p {
+  font-size: 28px;
+}
+[data-dpr="3"] .loading-span p {
+  font-size: 42px;
+}
+.empty-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  text-align: center;
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  color: #999;
+  font-size: 15px;
+}
+[data-dpr="2"] .empty-box {
+  font-size: 30px;
+}
+[data-dpr="3"] .empty-box {
+  font-size: 45px;
+}
+.empty-box i {
+  font-size: 40px;
+}
+[data-dpr="2"] .empty-box i {
+  font-size: 80px;
+}
+[data-dpr="3"] .empty-box i {
+  font-size: 120px;
+}
+.dia-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  text-align: center;
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  color: #999;
+  font-size: 15px;
+  top: 50%;
+  width: 90%;
+  height: 6rem;
+  background-color: #ffffff;
+}
+[data-dpr="2"] .dia-box {
+  font-size: 30px;
+}
+[data-dpr="3"] .dia-box {
+  font-size: 45px;
+}
+.dia-box i {
+  font-size: 40px;
+}
+[data-dpr="2"] .dia-box i {
+  font-size: 80px;
+}
+[data-dpr="3"] .dia-box i {
+  font-size: 120px;
+}
+@keyframes dialog-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dialog-zoom {
+  0% {
+    transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+  }
+}

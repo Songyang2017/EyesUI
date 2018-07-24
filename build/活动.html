@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="http://static.jsk365.com/swiper/4.0.7/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<div id="app">
+
+
+    <ul class="footerbar-List">
+        <li><a href="首页.html"><i class="iconfont">&#xe62f;</i><p>首页</p></a></li>
+        <li><a href="javascript:;" class="footerbar-active"><i class="iconfont">&#xe62a;</i><p>活动</p></a></li>
+        <li><a href="统计.html"><i class="iconfont">&#xe607;</i><p>统计</p></a></li>
+        <li><a href="我的.html"><i class="iconfont">&#xe638;</i><p>我的</p></a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="https://static.jsk365.com/lib/vue/2.5.3/vue.min.js"></script>
+<script src="js/components.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+//            flag: false
+        },
+        methods:{
+            dia() {
+//                this.flag = !this.flag;
+                this.$creatDialog()
+            }
+        }
+    })
+</script>
+</body>
+</html>
