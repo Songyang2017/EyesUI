@@ -73,18 +73,9 @@ Vue.component('emptyShow', {
     }
 });
 
-Vue.component('dialogAlert', {
-    template: '<popup bgColor="rgba(0,0,0,.6)" :showFlag="show"><div class="dia-box"><p>{{alertText}}</p></div></popup>',
-    props: {
-        alertText: {
-            type: String,
-            default: '已知'
-        },
-        show: {
-            type: Boolean,
-            default: false
-        }
-    }
+Vue.component('itemList', {
+    template: '',
+    props: {}
 });
 
 Vue.mixin({
