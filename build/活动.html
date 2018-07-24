@@ -9,11 +9,26 @@
     <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-<div id="app">
+<div id="app" v-cloak>
+    <scroll :data="list" style="height: 100%;overflow: hidden;">
+        <ul class="block-item-list">
+            <li class="block-item-list-li" v-for="item in list">
+                <a href="">
+                    <div class="left"><img :src="item.img" alt=""></div>
+                    <div class="right">
+                        <p>{{item.name}}</p>
+                        <p>{{item.desc}}</p>
+                        <p>{{item.beginDate}}&nbsp;开始</p>
+                        <p>{{item.expiryDate}}&nbsp;报名截止</p>
+                    </div>
+                </a>
+                <div>马上报名</div>
+            </li>
+            <li style="height: 1.7rem;"></li>
+        </ul>
+    </scroll>
 
-
-
-
+    <empty-show v-show="emptyValue"></empty-show>
     <ul class="footerbar-List">
         <li><a href="首页.html"><i class="iconfont">&#xe62f;</i><p>首页</p></a></li>
         <li><a href="javascript:;" class="footerbar-active"><i class="iconfont">&#xe62a;</i><p>活动</p></a></li>
@@ -21,21 +36,82 @@
         <li><a href="我的.html"><i class="iconfont">&#xe638;</i><p>我的</p></a></li>
     </ul>
 </div>
-<script type="text/javascript" src="https://static.jsk365.com/lib/vue/2.5.3/vue.min.js"></script>
-<script src="js/components.js"></script>
+<script type="text/javascript" src="//static.jsk365.com/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="//static.jsk365.com/lib/vue/2.5.3/vue.min.js"></script>
+<script type="text/javascript" src="//static.jsk365.com/lib/iscroll/iscroll.min.js"></script>
+<script type="text/javascript" src="js/components.js"></script>
+<script>
+    var list = [
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        },
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        },
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        },
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        },
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        },
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        },
+        {
+            "img": "https://oi3v1wa3b.qnssl.com/5afd15966e1cf.jpg?imageMogr2/gravity/Center/thumbnail/!750x500r/crop/750x500",
+            "name": "泰国普吉岛6日4晚半自助游(5钻)·亲子泡酒店",
+            "desc": "长江之星旅行俱乐部",
+            "beginDate": "2018年8月1日 08:00",
+            "expiryDate": "2018年8月15日 18:00"
+        }
+    ]
+</script>
 <script>
     var app = new Vue({
         el: '#app',
         data:{
-//            flag: false
+            list: list
+        },
+        computed:{
+            emptyValue: function() {
+                return this.list ? false : true
+            }
         },
         methods:{
-            dia() {
-//                this.flag = !this.flag;
-                this.$creatDialog()
-            }
+
         }
     })
+
+
+
+
 </script>
 </body>
 </html>

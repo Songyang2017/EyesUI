@@ -710,3 +710,72 @@ button {
 [data-dpr="3"] .message-item .message-item-list a .msg-body {
   font-size: 48px;
 }
+.block-item-list .block-item-list-li {
+  padding: 0.2rem 0.3rem;
+  font-size: 0;
+  position: relative;
+}
+.block-item-list .block-item-list-li:after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  transform: scale(1, 0.6);
+  -webkit-transform: scale(1, 0.6);
+  -ms-transform: scale(1, 0.6);
+  -moz-transform: scale(1, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #e6e6e6;
+}
+.block-item-list .block-item-list-li a {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.block-item-list .block-item-list-li a .left img {
+  width: 4rem;
+}
+.block-item-list .block-item-list-li a .right {
+  flex: 1;
+  padding-left: 0.12rem;
+  font-size: 12px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+[data-dpr="2"] .block-item-list .block-item-list-li a .right {
+  font-size: 24px;
+}
+[data-dpr="3"] .block-item-list .block-item-list-li a .right {
+  font-size: 36px;
+}
+.block-item-list .block-item-list-li a .right p:nth-child(1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.block-item-list .block-item-list-li a .right p:nth-child(2) {
+  color: #999;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.block-item-list .block-item-list-li a .right p:nth-child(3) {
+  color: #43cb45;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.block-item-list .block-item-list-li a .right p:nth-child(4) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

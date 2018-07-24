@@ -272,3 +272,55 @@ button{
     }
   }
 }
+
+.block-item-list{
+  .block-item-list-li{
+    padding: .2rem .3rem;
+    font-size: 0;
+    position: relative;
+    &:after{
+      content: '';
+      height: 1px;
+      width: 100%;
+      .scale(1, .6);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: @color-border;
+    }
+    a{
+      ._flex();
+      .left{
+        img{
+          width: 4rem;
+        }
+      }
+      .right{
+        flex: 1;
+        padding-left: .12rem;
+        .font-dpr(12px);
+        ._flex();
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+          &:nth-child(1){
+            .multiEllipsis(2)
+          }
+          &:nth-child(2){
+            color:@color-gray;
+            .no-wrap();
+          }
+          &:nth-child(3){
+            color:@color-green;
+            .no-wrap();
+          }
+          &:nth-child(4){
+            //color:@color-footer-active;
+            .no-wrap();
+          }
+        }
+      }
+    }
+
+  }
+}
