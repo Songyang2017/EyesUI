@@ -81,17 +81,26 @@ Vue.component('emptyShow',{
     }
 })
 
-Vue.component('itemList', {
-    template: ``,
-    props:{
-
-    }
-})
-
-Vue.mixin({
-    methods:{
-        $creatDialog() {
-            console.log('mixin', this)
+Vue.component('blockList',{
+    template: `<ul class="block-item-list">
+            <li class="block-item-list-li" v-if="dataList" v-for="item in dataList">
+                <a href="">
+                    <div class="left"><img :src="item.img" alt=""></div>
+                    <div class="right">
+                        <p>{{item.name}}</p>
+                        <p>{{item.desc}}</p>
+                        <p>{{item.beginDate}}&nbsp;开始</p>
+                        <p>{{item.expiryDate}}&nbsp;报名截止</p>
+                    </div>
+                </a>
+                <div>马上报名</div>
+            </li>
+            <li style="height: .5rem;"></li>
+        </ul>`,
+    props: {
+        dataList:{
+            type: Array,
+            default: []
         }
     }
 })

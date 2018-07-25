@@ -8,7 +8,7 @@ a {
   color: rgba(0, 0, 0, 0.8);
 }
 body {
-  background: #f4f4f4;
+  overflow-x: hidden;
 }
 [v-cloak] {
   display: none !important;
@@ -115,8 +115,11 @@ header {
 .ic-home:before {
   color: #ff9d29;
 }
+.block-radius {
+  border-radius: 5px;
+}
 .block-shadow {
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 input:-webkit-autofill,
 textarea:-webkit-autofill,
