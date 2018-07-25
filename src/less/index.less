@@ -24,11 +24,13 @@ html{
 }
 html,body,#app{
   height: 100%;
-  background-color: #fff;
+  background-color: #F8FAFE;
 }
 
 button{
   border-radius: 0.08rem;
+  .block-radius();
+  -webkit-appearance:none;
 }
 
 .index-top-box{
@@ -37,9 +39,9 @@ button{
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: @color-eleBackground;
   .flex();
   justify-content: space-between;
-  background-color: #fff;
   .font-dpr(15px);
   padding: 0.22rem 0.35rem;
   p{
@@ -107,6 +109,7 @@ button{
 .index-content{
   margin:0.6rem 0 0;
   .index-content-box{
+    background-color: @color-eleBackground;
     text-align: center;
     .font-dpr(16px);
     color: @color-gray;
@@ -115,7 +118,7 @@ button{
     padding: 0.8rem 0;
     margin: 0 auto;
     margin-bottom: 0.6rem;
-    border-radius: 8px;
+    .block-radius();
   }
 }
 
@@ -152,6 +155,7 @@ button{
     position: relative;
     font-size: 0;
     padding: 0.35rem 0.25rem;
+    background-color: @color-eleBackground;
     &:after{
       content: '';
       width: 100%;
@@ -256,6 +260,7 @@ button{
 .message-item{
   .message-item-list{
     background-color: @color-eleBackground;
+    .block-radius();
     .block-shadow();
     margin: 0.3rem auto;
     width: 95%;
@@ -275,6 +280,7 @@ button{
 
 .block-item-list{
   .block-item-list-li{
+    background-color: @color-eleBackground;
     padding: .2rem .3rem;
     font-size: 0;
     position: relative;

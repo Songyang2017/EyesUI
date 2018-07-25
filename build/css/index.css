@@ -206,7 +206,7 @@ a {
   color: rgba(0, 0, 0, 0.8);
 }
 body {
-  background: #f4f4f4;
+  overflow-x: hidden;
 }
 [v-cloak] {
   display: none !important;
@@ -313,8 +313,11 @@ header {
 .ic-home:before {
   color: #ff9d29;
 }
+.block-radius {
+  border-radius: 5px;
+}
 .block-shadow {
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 input:-webkit-autofill,
 textarea:-webkit-autofill,
@@ -360,10 +363,12 @@ html,
 body,
 #app {
   height: 100%;
-  background-color: #fff;
+  background-color: #F8FAFE;
 }
 button {
   border-radius: 0.08rem;
+  border-radius: 5px;
+  -webkit-appearance: none;
 }
 .index-top-box {
   position: fixed;
@@ -371,6 +376,7 @@ button {
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: #fff;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -378,7 +384,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
   font-size: 15px;
   padding: 0.22rem 0.35rem;
 }
@@ -464,15 +469,16 @@ button {
   margin: 0.6rem 0 0;
 }
 .index-content .index-content-box {
+  background-color: #fff;
   text-align: center;
   font-size: 16px;
   color: #999;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   width: 8rem;
   padding: 0.8rem 0;
   margin: 0 auto;
   margin-bottom: 0.6rem;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 [data-dpr="2"] .index-content .index-content-box {
   font-size: 32px;
@@ -530,6 +536,7 @@ button {
   position: relative;
   font-size: 0;
   padding: 0.35rem 0.25rem;
+  background-color: #fff;
 }
 .mycenter-item .mycenter-item-list:after {
   content: '';
@@ -682,7 +689,8 @@ button {
 }
 .message-item .message-item-list {
   background-color: #fff;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   margin: 0.3rem auto;
   width: 95%;
   padding: 0.3rem;
@@ -711,6 +719,7 @@ button {
   font-size: 48px;
 }
 .block-item-list .block-item-list-li {
+  background-color: #fff;
   padding: 0.2rem 0.3rem;
   font-size: 0;
   position: relative;

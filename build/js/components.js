@@ -73,15 +73,12 @@ Vue.component('emptyShow', {
     }
 });
 
-Vue.component('itemList', {
-    template: '',
-    props: {}
-});
-
-Vue.mixin({
-    methods: {
-        $creatDialog: function $creatDialog() {
-            console.log('mixin', this);
+Vue.component('blockList', {
+    template: '<ul class="block-item-list">\n            <li class="block-item-list-li" v-if="dataList" v-for="item in dataList">\n                <a href="">\n                    <div class="left"><img :src="item.img" alt=""></div>\n                    <div class="right">\n                        <p>{{item.name}}</p>\n                        <p>{{item.desc}}</p>\n                        <p>{{item.beginDate}}&nbsp;\u5F00\u59CB</p>\n                        <p>{{item.expiryDate}}&nbsp;\u62A5\u540D\u622A\u6B62</p>\n                    </div>\n                </a>\n                <div>\u9A6C\u4E0A\u62A5\u540D</div>\n            </li>\n            <li style="height: .5rem;"></li>\n        </ul>',
+    props: {
+        dataList: {
+            type: Array,
+            default: []
         }
     }
 });
